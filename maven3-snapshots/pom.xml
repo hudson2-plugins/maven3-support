@@ -1,0 +1,76 @@
+<!-- **************************************************************************
+#
+# Copyright (c) 2010-2011 Sonatype, Inc.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Contributors: 
+#
+#   
+#        
+#
+#************************************************************************** --> 
+
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.eclipse.hudson.main</groupId>
+    <artifactId>hudson-maven3</artifactId>
+    <version>2.1.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>maven3-snapshots</artifactId>
+  <name>Hudson :: Maven 3 :: SNAPSHOT Monitor</name>
+  <packaging>hpi</packaging>
+
+  <properties>
+    <pluginName>Hudson SNAPSHOT Monitoring</pluginName>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-repository-metadata</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.hudson.main</groupId>
+      <artifactId>maven3-plugin</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.eclipse.hudson.main</groupId>
+          <artifactId>hudson-rest-plugin</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.hudson.main</groupId>
+      <artifactId>hudson-service</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <!-- Strip off the version; so its easier to drop in plugins for testing -->
+    <finalName>${project.artifactId}</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.jvnet.hudson.tools</groupId>
+        <artifactId>maven-hpi-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <showDeprecation>true</showDeprecation>
+          <disabledTestInjection>true</disabledTestInjection>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

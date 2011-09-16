@@ -1,0 +1,37 @@
+<!-- **************************************************************************
+#
+# Copyright (c) 2010-2011, Sonatype, Inc.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Contributors: 
+#
+#   
+#        
+#
+#************************************************************************** --> 
+
+<j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:t="/lib/hudson">
+
+    <!--
+        Add our own table because summary tag assumes it's in a table, but the 
+        project page doesn't wrap action fragments in a table; but it does other
+        hardcoded actions like changes and test results.
+        
+        TODO: this would be something to fix in Hudson core but could mess up 
+        rendering of other plugins with jobMain.jelly that have worked around
+        this too.
+        
+        See AbstractProject/main.jelly
+    -->
+    <table style="margin-top: 1em; margin-left:1em;">
+        <j:if test="${it.buildAvailable}">
+            <t:summary icon="/plugin/maven3-plugin/images/maven-icon-48x48.png" href="lastBuild/maven/">
+                Latest Maven Build Information
+            </t:summary>
+        </j:if>
+    </table>
+</j:jelly>

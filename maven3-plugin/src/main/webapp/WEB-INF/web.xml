@@ -1,0 +1,48 @@
+<!-- **************************************************************************
+#
+# Copyright (c) 2010-2011 Sonatype, Inc.
+#
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Contributors: 
+#
+#   
+#        
+#
+#************************************************************************** --> 
+
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_3_0.dtd">
+
+<web-app>
+
+    <servlet>
+        <servlet-name>jUnitHostImpl</servlet-name>
+        <servlet-class>com.google.gwt.junit.server.JUnitHostImpl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>remoteLoggerServiceImpl</servlet-name>
+        <servlet-class>com.allen_sauer.gwt.log.server.RemoteLoggerServiceImpl</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jUnitHostImpl</servlet-name>
+        <url-pattern>/MavenBuildInfo/junithost/*</url-pattern>
+        <url-pattern>/MavenConfiguration/junithost/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>remoteLoggerServiceImpl</servlet-name>
+        <url-pattern>/MavenBuildInfo/gwt-log</url-pattern>
+        <url-pattern>/MavenConfiguration/gwt-log</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>MavenBuildInfo.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
