@@ -1,7 +1,7 @@
 /**
  * The MIT License
  *
- * Copyright (c) 2010-2011 Sonatype, Inc. All rights reserved.
+ * Copyright (c) 2010-2011 Sonatype, Inc, Oracle Corporation, Anton Kozak.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -194,5 +194,34 @@ public class MavenBuilder
         if (build.getAction(MavenBuildAction.class) == null) {
             build.addAction(new MavenBuildAction(build));
         }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        MavenBuilder that = (MavenBuilder) o;
+
+        if (!config.equals(that.config)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    @Override
+    public int hashCode() {
+        return config.hashCode();
     }
 }
