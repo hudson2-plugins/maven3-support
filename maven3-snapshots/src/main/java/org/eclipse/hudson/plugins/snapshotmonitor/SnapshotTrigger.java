@@ -1,6 +1,6 @@
 /*******************************************************************************
  *
- * Copyright (c) 2010-2011 Sonatype, Inc.
+ * Copyright (c) 2010-2011 Sonatype, Inc., Oracle Corporation
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -9,7 +9,7 @@
  *
  * Contributors: 
  *
- *   
+ *    Nikita Levyankov
  *     
  *
  *******************************************************************************/ 
@@ -111,5 +111,33 @@ public class SnapshotTrigger
         public boolean isApplicable(final Item item) {
             return item instanceof MatrixProject || item instanceof Project;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        if (!super.equals(o)) {
+            return false;
+        }
+
+        SnapshotTrigger that = (SnapshotTrigger) o;
+
+        if (excludeInternallyProduced != that.excludeInternallyProduced) {
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (excludeInternallyProduced ? 1 : 0);
+        return result;
     }
 }

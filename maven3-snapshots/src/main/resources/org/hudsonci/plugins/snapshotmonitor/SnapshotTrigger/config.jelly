@@ -1,6 +1,6 @@
 <!-- **************************************************************************
 #
-# Copyright (c) 2010-2011, Sonatype, Inc.
+# Copyright (c) 2010-2011, Sonatype, Inc., Oracle Corporation
 #
 # All rights reserved. This program and the accompanying materials
 # are made available under the terms of the Eclipse Public License v1.0
@@ -9,17 +9,21 @@
 #
 # Contributors: 
 #
+#   Anton Kozak
 #   
 #        
 #
 #************************************************************************** --> 
 
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
-    <f:entry title="Schedule" field="spec">
+    <j:set var="instanceProperty" value="${cu.getExternalProjectProperty(it, descriptor.jsonSafeClassName)}"/>
+    <j:set var="instance" value="${instanceProperty.getValue()}"/>
+
+    <f:entry title="Schedule" field="spec" isPropertyOverridden="${instanceProperty.isOverridden()}">
         <f:expandableTextbox/>
     </f:entry>
 
-    <f:entry title="Exclude internally produced dependencies" field="excludeInternallyProduced">
+    <f:entry title="Exclude internally produced dependencies" field="excludeInternallyProduced" isPropertyOverridden="${instanceProperty.isOverridden()}">
         <f:checkbox/>
     </f:entry>
 </j:jelly>

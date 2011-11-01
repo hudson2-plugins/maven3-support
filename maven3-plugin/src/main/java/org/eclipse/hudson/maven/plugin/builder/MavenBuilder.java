@@ -1,6 +1,6 @@
 /*******************************************************************************
  *
- * Copyright (c) 2010-2011 Sonatype, Inc.
+ * Copyright (c) 2010-2011 Sonatype, Inc, Oracle Corporation
  *
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
@@ -9,7 +9,7 @@
  *
  * Contributors:
  *
- *
+ *    Anton Kozak.
  *
  *
  *******************************************************************************/
@@ -186,5 +186,34 @@ public class MavenBuilder
         if (build.getAction(MavenBuildAction.class) == null) {
             build.addAction(new MavenBuildAction(build));
         }
+    }
+
+    /**
+     * @inheritDoc
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        MavenBuilder that = (MavenBuilder) o;
+
+        if (!config.equals(that.config)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    @Override
+    public int hashCode() {
+        return config.hashCode();
     }
 }
