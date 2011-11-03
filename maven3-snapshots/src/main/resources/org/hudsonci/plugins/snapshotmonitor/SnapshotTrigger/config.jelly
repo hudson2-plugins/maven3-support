@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form">
-    <j:set var="instanceProperty" value="${cu.getExternalProjectProperty(it, descriptor.jsonSafeClassName)}"/>
+    <j:set var="instanceProperty" value="${cu.getBaseProjectProperty(it, descriptor.jsonSafeClassName)}"/>
     <j:set var="instance" value="${instanceProperty.getValue()}"/>
 
     <f:entry title="Schedule" field="spec" isPropertyOverridden="${instanceProperty.isOverridden()}">
