@@ -83,7 +83,7 @@ public class ArtifactFingerprinter
     public boolean perform(final AbstractBuild build, final Launcher launcher, final BuildListener listener)
         throws InterruptedException, IOException {
 
-        if(Result.ABORTED == build.getResult()) {
+        if(build.getResult().isWorseThan(Result.UNSTABLE)) {
             return true;
         }
 
