@@ -200,6 +200,9 @@ public class MavenProcessBuilder
         // Always show the version being used.
         args.add("-V");
 
+        // Enable non-interactive (batch) mode.
+        args.add("-B");
+
         if (isSet(config.getErrors())) {
             args.add("-e");
         }

@@ -96,6 +96,7 @@ public class MavenProcessBuilderTest
         // Happy not on the banned list
         ArgumentListBuilder args = new ArgumentListBuilder();
         args.add("-V");
+        args.add("-B");
         assertFalse(builder.detectBannedOptions(args));
     }
 
