@@ -94,6 +94,10 @@ public class ArtifactRegistry
             entry.withConsumingProjects(artifact.getConsumingProjects());
             entry.withDependentProjects(artifact.getDependentProjects());
 
+            if (entry.getArchivedFile() == null && artifact.getArchivedFile() != null) {
+                entry.withArchivedFile(artifact.getArchivedFile());
+            }
+
             map.put(entry.getCoordinates(), entry);
         }
     }
