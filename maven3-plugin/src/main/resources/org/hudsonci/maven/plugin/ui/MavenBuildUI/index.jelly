@@ -45,6 +45,7 @@ THE SOFTWARE.
                     background: aliceblue;
                     */
                 }
+<!--[if IE]>
                 /*Resolve IE sizing issue*/
                 .gwt-TabLayoutPanelContent {
                     width: 100%;
@@ -55,6 +56,7 @@ THE SOFTWARE.
                     width:100% !important;
                     height:100% !important;
                 }
+<![endif]-->
 
             </style>
             <script type="text/javascript" language="javascript" src="${it.pluginPath}/MavenBuildInfo/MavenBuildInfo.nocache.js"/>
