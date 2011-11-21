@@ -128,6 +128,7 @@ public class PerformArchiving
 
                         source.copyTo(target);
                         // TODO: catch IOException and continue with rest of artifacts?
+                        artifact.withArchivedFile(target.getRemote());
                         count++;
                     }
                     else {

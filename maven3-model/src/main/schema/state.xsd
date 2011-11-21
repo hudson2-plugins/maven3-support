@@ -176,6 +176,7 @@
                 due to build dependencies or project dependencies.
             -->
             <xs:element name="consumingProject" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="archivedFile" type="xs:string" minOccurs="0"/>
         </xs:sequence>
         <!--
             Purely for convenience of not having to loop through the actions
