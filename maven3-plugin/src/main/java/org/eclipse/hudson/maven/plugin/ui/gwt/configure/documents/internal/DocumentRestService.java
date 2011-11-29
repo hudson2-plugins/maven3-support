@@ -44,7 +44,7 @@ public interface DocumentRestService
     //String DOCUMENT_JSON = "application/vnd.hudsonci.maven-document-v1+json";
 
     @GET
-    void getDocuments(@QueryParam("summary") boolean summary, MethodCallback<DocumentsDTO> callback);
+    void getDocuments(@QueryParam("summary") boolean summary, @QueryParam("ts") long timestamp, MethodCallback<DocumentsDTO> callback);
 
     @POST
     // NOTE: Requires RestyGWT 1.1+ for @Consumes/@Produces use
