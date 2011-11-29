@@ -55,6 +55,7 @@ import javax.ws.rs.core.Response.Status;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyBoolean;
+import static org.mockito.Matchers.anyLong;
 import static org.mockito.Matchers.anyCollectionOf;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.inOrder;
@@ -144,7 +145,7 @@ public class DocumentManagerLiaisonImplTest
                 callback.onSuccess(successMethod, result);
                 return null;
             }
-        }).when(documentRestService).getDocuments(anyBoolean(), any(MethodCallback.class));
+        }).when(documentRestService).getDocuments(anyBoolean(), anyLong(), any(MethodCallback.class));
 
         liaison.fetchAll();
 
