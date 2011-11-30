@@ -27,7 +27,6 @@ import org.apache.maven.eventspy.EventSpy;
 import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.component.annotations.Requirement;
 import org.eclipse.hudson.utils.common.TestAccessible;
-import org.model.hudson.maven.eventspy.common.Constants;
 import org.sonatype.guice.bean.binders.SpaceModule;
 import org.sonatype.guice.bean.binders.WireModule;
 import org.sonatype.guice.bean.locators.MutableBeanLocator;
@@ -41,10 +40,10 @@ import java.util.Map;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Preconditions.checkState;
-import static org.model.hudson.maven.eventspy.common.Constants.DELEGATE_PROPERTY;
+import static org.eclipse.hudson.maven.eventspy.common.Constants.DELEGATE_PROPERTY;
 
 /**
- * Delegates to a {@link EventSpy} component configured via {@link Constants#DELEGATE_PROPERTY}.
+ * Delegates to a {@link EventSpy} component configured via {@link org.eclipse.hudson.maven.eventspy.common.Constants#DELEGATE_PROPERTY}.
  * This is the main {@link EventSpy} which Maven will load and is configured via Plexus, delegate
  * is loaded via JSR-330.
  *

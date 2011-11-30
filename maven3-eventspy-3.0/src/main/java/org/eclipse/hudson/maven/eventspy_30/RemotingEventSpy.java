@@ -16,21 +16,21 @@
 
 package org.eclipse.hudson.maven.eventspy_30;
 
+import org.eclipse.hudson.maven.eventspy.common.Callback;
+import org.eclipse.hudson.maven.eventspy.common.CallbackManager;
+import org.eclipse.hudson.maven.eventspy.common.RemotingClient;
 import org.eclipse.hudson.maven.model.PropertiesDTOHelper;
 import org.eclipse.hudson.maven.model.state.RuntimeEnvironmentDTO;
 import org.apache.maven.BuildAbort;
-import org.model.hudson.maven.eventspy.common.Callback;
-import org.model.hudson.maven.eventspy.common.CallbackManager;
-import org.model.hudson.maven.eventspy.common.RemotingClient;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.List;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static org.model.hudson.maven.eventspy.common.Constants.CALLBACK_WAIT_TIMEOUT;
-import static org.model.hudson.maven.eventspy.common.Constants.CALLBACK_WAIT_TIMEOUT_UNIT;
-import static org.model.hudson.maven.eventspy.common.Constants.PORT_PROPERTY;
+import static org.eclipse.hudson.maven.eventspy.common.Constants.CALLBACK_WAIT_TIMEOUT;
+import static org.eclipse.hudson.maven.eventspy.common.Constants.CALLBACK_WAIT_TIMEOUT_UNIT;
+import static org.eclipse.hudson.maven.eventspy.common.Constants.PORT_PROPERTY;
 
 /**
  * Hudson {@link org.apache.maven.eventspy.EventSpy} for Maven 3.0 integration.

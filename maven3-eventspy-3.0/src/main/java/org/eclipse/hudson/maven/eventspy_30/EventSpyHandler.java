@@ -16,9 +16,9 @@
 
 package org.eclipse.hudson.maven.eventspy_30;
 
+import org.eclipse.hudson.maven.eventspy.common.Callback;
 import org.eclipse.hudson.maven.eventspy_30.recorder.BuildRecorder;
 import org.eclipse.hudson.utils.event.EventHandlerSupport;
-import org.model.hudson.maven.eventspy.common.Callback;
 
 
 import static com.google.common.base.Preconditions.checkNotNull;

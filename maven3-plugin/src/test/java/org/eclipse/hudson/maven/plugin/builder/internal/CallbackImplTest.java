@@ -16,7 +16,7 @@
 
 package org.eclipse.hudson.maven.plugin.builder.internal;
 
-import org.eclipse.hudson.maven.plugin.builder.internal.CallbackImpl;
+import org.eclipse.hudson.maven.eventspy.common.Callback;
 import org.eclipse.hudson.maven.model.state.BuildStateDTO;
 import org.eclipse.hudson.maven.model.state.MavenProjectDTO;
 import org.eclipse.hudson.maven.model.state.RuntimeEnvironmentDTO;
@@ -24,7 +24,6 @@ import org.eclipse.hudson.maven.model.state.RuntimeEnvironmentDTO;
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
-import org.model.hudson.maven.eventspy.common.Callback;
 
 import java.util.Arrays;
 import java.util.List;

@@ -12,9 +12,9 @@
  *   
  *     
  *
- *******************************************************************************/ 
+ *******************************************************************************/
 
-package org.model.hudson.maven.eventspy.common;
+package org.eclipse.hudson.maven.eventspy.common;
 
 import java.io.Serializable;
 

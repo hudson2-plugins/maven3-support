@@ -39,7 +39,6 @@
         <groupId>org.eclipse.hudson.main</groupId>
         <artifactId>hudson-jaxb</artifactId>
         <type>pom</type>
-        <version>${project.version}</version>
         <scope>import</scope>
       </dependency>
 
@@ -62,7 +61,7 @@
         <artifactId>maven3-model</artifactId>
         <version>${project.version}</version>
       </dependency>
-      
+
       <dependency>
         <groupId>org.eclipse.hudson.main</groupId>
         <artifactId>maven3-model</artifactId>

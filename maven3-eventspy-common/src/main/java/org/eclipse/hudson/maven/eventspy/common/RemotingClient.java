@@ -12,9 +12,9 @@
  *   
  *     
  *
- *******************************************************************************/ 
+ *******************************************************************************/
 
-package org.model.hudson.maven.eventspy.common;
+package org.eclipse.hudson.maven.eventspy.common;
 
 import hudson.remoting.Channel;
 import org.slf4j.Logger;

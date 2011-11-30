@@ -16,7 +16,7 @@
 
 package org.eclipse.hudson.maven.plugin.builder.internal.invoker;
 
-import org.model.hudson.maven.eventspy.common.Callback;
+import org.eclipse.hudson.maven.eventspy.common.Callback;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
