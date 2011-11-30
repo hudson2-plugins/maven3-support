@@ -12,9 +12,9 @@
  *   
  *     
  *
- *******************************************************************************/ 
+ *******************************************************************************/
 
-package org.model.hudson.maven.eventspy.common;
+package org.eclipse.hudson.maven.eventspy.common;
 
 import org.eclipse.hudson.maven.model.state.ArtifactDTO;
 import org.eclipse.hudson.maven.model.state.MavenProjectDTO;

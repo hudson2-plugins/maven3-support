@@ -16,10 +16,11 @@
 
 package org.eclipse.hudson.maven.eventspy_30.recorder;
 
+import org.eclipse.hudson.maven.eventspy.common.Callback;
+import org.eclipse.hudson.maven.eventspy.common.DocumentReference;
 import org.eclipse.hudson.maven.model.state.ArtifactDTO;
 import com.google.common.collect.ImmutableList;
 
-import org.eclipse.hudson.maven.eventspy_30.recorder.BuildRecorder;
 import org.eclipse.hudson.maven.model.state.MavenProjectDTOHelper;
 import org.eclipse.hudson.maven.model.MavenCoordinatesDTO;
 import org.eclipse.hudson.maven.model.state.ArtifactOperationDTO;
@@ -30,8 +31,6 @@ import org.apache.maven.project.MavenProject;
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
-import org.model.hudson.maven.eventspy.common.Callback;
-import org.model.hudson.maven.eventspy.common.DocumentReference;
 
 import java.io.File;
 import java.util.ArrayList;

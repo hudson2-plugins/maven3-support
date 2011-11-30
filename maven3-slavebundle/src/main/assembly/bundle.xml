@@ -31,7 +31,7 @@
                 <include>**</include>
             </includes>
         </fileSet>
-        
+
         <fileSet>
             <directory>target/apache-maven-${mavenVersion}</directory>
             <outputDirectory>/bundled-maven</outputDirectory>

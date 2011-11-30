@@ -16,8 +16,8 @@
 
 package org.eclipse.hudson.maven.eventspy_30.handler;
 
+import org.eclipse.hudson.maven.eventspy.common.Callback;
 import org.eclipse.hudson.maven.eventspy_30.EventSpyHandler;
-import org.eclipse.hudson.maven.eventspy_30.handler.MavenExecutionResultHandler;
 import org.eclipse.hudson.maven.model.state.MavenProjectDTO;
 
 import org.apache.maven.execution.DefaultMavenExecutionResult;
@@ -29,7 +29,6 @@ import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.model.hudson.maven.eventspy.common.Callback;
 
 import java.util.Arrays;
 import java.util.List;
