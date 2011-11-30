@@ -16,6 +16,7 @@
 
 package org.eclipse.hudson.maven.eventspy_30.recorder;
 
+import org.eclipse.hudson.maven.eventspy.common.Callback;
 import org.eclipse.hudson.maven.eventspy_30.MavenArtifactConverter;
 import org.eclipse.hudson.maven.eventspy_30.MavenProjectConverter;
 import org.eclipse.hudson.maven.model.state.MavenProjectDTOHelper;
@@ -29,7 +30,6 @@ import org.eclipse.hudson.maven.model.state.MavenProjectDTO;
 
 import org.apache.maven.execution.BuildSummary;
 import org.apache.maven.project.MavenProject;
-import org.model.hudson.maven.eventspy.common.Callback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.sonatype.aether.graph.Dependency;

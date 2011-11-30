@@ -16,14 +16,14 @@
 
 package org.eclipse.hudson.maven.plugin.builder.internal;
 
+import org.eclipse.hudson.maven.eventspy.common.Callback;
+import org.eclipse.hudson.maven.eventspy.common.CallbackManager;
 import org.eclipse.hudson.maven.plugin.builder.internal.invoker.CallbackCloseAwareHandler;
 import org.eclipse.hudson.maven.plugin.builder.internal.invoker.Invoker;
 import org.eclipse.hudson.maven.plugin.builder.internal.invoker.InvokerImpl;
 import org.eclipse.hudson.maven.plugin.builder.internal.invoker.ObjectLocalHandler;
 import org.eclipse.hudson.maven.plugin.builder.internal.invoker.RecordingHandler;
 import org.eclipse.hudson.maven.plugin.builder.internal.invoker.RemoteInvokeHandler;
-import org.model.hudson.maven.eventspy.common.Callback;
-import org.model.hudson.maven.eventspy.common.CallbackManager;
 
 import hudson.FilePath;
 import hudson.remoting.Callable;

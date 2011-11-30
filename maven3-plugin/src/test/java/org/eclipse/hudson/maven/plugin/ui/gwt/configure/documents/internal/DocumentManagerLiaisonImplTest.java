@@ -132,7 +132,7 @@ public class DocumentManagerLiaisonImplTest
         doAnswer(new Answer()
         {
             public Object answer(final InvocationOnMock invocation) throws Throwable {
-                MethodCallback<DocumentsDTO> callback = (MethodCallback<DocumentsDTO>) invocation.getArguments()[1];
+                MethodCallback<DocumentsDTO> callback = (MethodCallback<DocumentsDTO>) invocation.getArguments()[2];
                 DocumentsDTO result = new DocumentsDTO().withDocuments(new DocumentDTO());
                 callback.onSuccess(successMethod, result);
                 return null;

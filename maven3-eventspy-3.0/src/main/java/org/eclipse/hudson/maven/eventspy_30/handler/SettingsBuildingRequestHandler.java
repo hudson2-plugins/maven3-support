@@ -18,8 +18,8 @@ package org.eclipse.hudson.maven.eventspy_30.handler;
 
 import org.apache.maven.settings.building.SettingsBuildingRequest;
 import org.apache.maven.settings.building.StringSettingsSource;
+import org.eclipse.hudson.maven.eventspy.common.DocumentReference;
 import org.eclipse.hudson.maven.eventspy_30.EventSpyHandler;
-import org.model.hudson.maven.eventspy.common.DocumentReference;
 
 import javax.inject.Named;
 

@@ -20,7 +20,6 @@ import org.apache.maven.eventspy.EventSpy;
 import org.codehaus.plexus.logging.AbstractLogger;
 import org.codehaus.plexus.logging.Logger;
 import org.codehaus.plexus.logging.LoggerManager;
-import org.model.hudson.maven.eventspy.common.Callback;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
@@ -33,7 +32,7 @@ import static org.codehaus.plexus.logging.Logger.LEVEL_INFO;
 import static org.codehaus.plexus.logging.Logger.LEVEL_WARN;
 
 /**
- * Bridges logging over {@link Callback}.
+ * Bridges logging over {@link org.eclipse.hudson.maven.eventspy.common.Callback}.
  *
  * @author <a href="mailto:jason@planet57.com">Jason Dillon</a>
  * @since 2.1.0

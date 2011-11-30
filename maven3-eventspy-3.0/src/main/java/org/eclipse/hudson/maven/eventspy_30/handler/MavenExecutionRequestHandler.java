@@ -20,8 +20,8 @@ package org.eclipse.hudson.maven.eventspy_30.handler;
 import org.apache.maven.cli.BatchModeMavenTransferListener;
 import org.apache.maven.cli.QuietMavenTransferListener;
 import org.apache.maven.execution.MavenExecutionRequest;
+import org.eclipse.hudson.maven.eventspy.common.DocumentReference;
 import org.eclipse.hudson.maven.eventspy_30.EventSpyHandler;
-import org.model.hudson.maven.eventspy.common.DocumentReference;
 import org.sonatype.aether.transfer.TransferListener;
 
 import javax.inject.Named;
