@@ -109,7 +109,7 @@ public class DocumentManagerLiaisonImpl
         waitWidget.startWaiting();
 
         // FIXME: Here should only need to fetch document summary... update once we can pull content as needed
-        documentRestService.getDocuments(false, new MethodCallback<DocumentsDTO>()
+        documentRestService.getDocuments(false, System.currentTimeMillis(), new MethodCallback<DocumentsDTO>()
         {
             public void onSuccess(final Method method, final DocumentsDTO result) {
                 Log.debug("Received response to all documents; status=" + method.getResponse().getStatusText());
