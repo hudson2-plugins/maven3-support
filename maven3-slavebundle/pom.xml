@@ -43,6 +43,12 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
       <artifactId>maven3-eventspy-3.0</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>hudson-utils</artifactId>
+          <groupId>org.jvnet.hudson.main</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
 

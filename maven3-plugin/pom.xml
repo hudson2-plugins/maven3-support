@@ -47,7 +47,7 @@ THE SOFTWARE.
         <groupId>org.jvnet.hudson.main</groupId>
         <artifactId>hudson-rest</artifactId>
         <type>pom</type>
-        <version>2.1.2</version>
+        <version>${hudson.rest.version}</version>
         <scope>import</scope>
       </dependency>
 
@@ -55,13 +55,66 @@ THE SOFTWARE.
         <groupId>org.jvnet.hudson.main</groupId>
         <artifactId>hudson-gwt</artifactId>
         <type>pom</type>
-        <version>2.1.2</version>
+        <version>${hudson.gwt.version}</version>
         <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
+    
+    <dependency>
+        <groupId>org.jvnet.hudson.main</groupId>
+        <artifactId>hudson-test-utils</artifactId>
+        <version>${hudson.core.version}</version>
+        <scope>test</scope>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.jvnet.hudson.main</groupId>
+        <artifactId>hudson-core</artifactId>
+        <version>${hudson.core.version}</version>
+        <scope>provided</scope>
+        <exclusions>
+            <exclusion>
+                <artifactId>hudson-cli</artifactId>
+                <groupId>org.jvnet.hudson.main</groupId>
+            </exclusion>
+            <exclusion>
+                <artifactId>hudson-remoting</artifactId>
+                <groupId>org.jvnet.hudson.main</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.jvnet.hudson.main</groupId>
+        <artifactId>hudson-utils</artifactId>
+        <version>${hudson.core.version}</version>
+        <scope>provided</scope>
+    </dependency>
+
+        <dependency>
+        <groupId>org.jvnet.hudson.main</groupId>
+        <artifactId>hudson-plugin-utils</artifactId>
+        <version>${hudson.core.version}</version>
+        <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.jvnet.hudson.main</groupId>
+        <artifactId>hudson-remoting</artifactId>
+        <version>${hudson.core.version}</version>
+        <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.jvnet.hudson.main</groupId>
+        <artifactId>hudson-inject</artifactId>
+        <version>${hudson.core.version}</version>
+        <scope>provided</scope>
+    </dependency>
+        
     <dependency>
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
@@ -76,6 +129,7 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
       <artifactId>rest-plugin</artifactId>
+      <version>${hudson.rest.version}</version>
     </dependency>
 
     <dependency>
@@ -93,12 +147,14 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
       <artifactId>hudson-service</artifactId>
+      <version>${hudson.core.version}</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
       <artifactId>hudson-rest-api</artifactId>
+      <version>${hudson.rest.version}</version>
       <scope>provided</scope>
     </dependency>
 
@@ -117,18 +173,21 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
       <artifactId>hudson-gwt-common</artifactId>
+      <version>${hudson.gwt.version}</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
       <artifactId>hudson-gwt-icons-silk</artifactId>
+      <version>${hudson.gwt.version}</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
       <artifactId>hudson-gwt-theme-chrome</artifactId>
+      <version>${hudson.gwt.version}</version>
       <scope>provided</scope>
     </dependency>
 
@@ -141,6 +200,7 @@ THE SOFTWARE.
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
       <artifactId>hudson-gwt-test-support</artifactId>
+      <version>${hudson.gwt.version}</version>
       <scope>test</scope>
     </dependency>
 
@@ -149,13 +209,7 @@ THE SOFTWARE.
       <artifactId>maven3-model</artifactId>
       <type>test-jar</type>
     </dependency>
-
-    <dependency>
-      <groupId>org.jvnet.hudson.main</groupId>
-      <artifactId>hudson-test-utils</artifactId>
-      <scope>test</scope>
-    </dependency>
-   
+ 
   </dependencies>
 
   <build>

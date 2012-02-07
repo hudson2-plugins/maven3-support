@@ -38,6 +38,10 @@ THE SOFTWARE.
   <packaging>pom</packaging>
 
   <properties>
+    <hudson.core.version>2.2.0</hudson.core.version>
+    <hudson.rest.version>2.1.2</hudson.rest.version>
+    <hudson.jaxb.version>2.1.2</hudson.jaxb.version>
+    <hudson.gwt.version>2.1.2</hudson.gwt.version>
     <mavenVersion>3.0.3</mavenVersion>
     <plexus-component-annotations.version>1.5.5</plexus-component-annotations.version>
   </properties>
@@ -47,7 +51,7 @@ THE SOFTWARE.
       <dependency>
         <groupId>org.jvnet.hudson.main</groupId>
         <artifactId>hudson-jaxb</artifactId>
-        <version>2.1.2</version>
+         <version>${hudson.jaxb.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
